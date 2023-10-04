@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Boutique en ligne de formation en cybersécurité</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Boutique en ligne de formation en cybersécurité</h1>
+  </header>
+
+  <main>
+    <section class="formations">
+      <h2>Formations</h2>
+      <ul>
+        <li>
+          <a href="#">Formation de base en cybersécurité</a>
+          <p>Cette formation vous apprendra les bases de la cybersécurité, de la sécurité des réseaux à la sécurité des applications.</p>
+        </li>
+        <li>
+          <a href="#">Formation avancée en cybersécurité</a>
+          <p>Cette formation vous apprendra les techniques avancées de cybersécurité, telles que la sécurité offensive et la sécurité des systèmes d'information.</p>
+        </li>
+        <li>
+          <a href="#">Formation sur mesure</a>
+          <p>Cette formation est conçue pour répondre à vos besoins spécifiques en matière de cybersécurité.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="commande">
+      <h2>Commande</h2>
+      <form action="commande.php" method="post">
+        <input type="text" name="nom" placeholder="Nom">
+        <input type="email" name="email" placeholder="Email">
+        <input type="text" name="formation" placeholder="Formation">
+        <input type="submit" value="Commander">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright © 2023</p>
+  </footer>
+
+</body>
+</html>
