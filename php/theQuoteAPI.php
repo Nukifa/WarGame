@@ -16,6 +16,10 @@
         echo $quotes_array[rand(0, sizeof($quotes_array)-1)];
         }else if($_GET['cmd'] == "getFlag" && (!isset($_GET['noflag']) || $_GET['noflag'] == "false")){
             echo "MAP{Ca_c_est_un_beau_flag}";
+        }else if($_GET['cmd'] == "getFlag"){
+            echo "Vous ne pouvez pas obtenir le flag avec le noflag activé.";
+        }else{
+            echo "Les commandes valides sont getQuote et getFlag.";
         }
     }else{
         echo "Vous devez définir la commande à exécuter et le token d'authentification.";
