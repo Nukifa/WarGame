@@ -3,7 +3,7 @@
   // Fonction pour vérifier les droits d'accès
   function check_access($user) {
     // Si l'utilisateur est un administrateur, il a accès
-    if ($user['role'] == 'admin') {
+    if ($user['admin'] == 'true') {
       return true;
     }
 
