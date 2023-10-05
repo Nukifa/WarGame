@@ -1,5 +1,5 @@
 <?php
-    const $token = "presqueUnFlag";
+    $token = "presqueUnFlag";
     if(!empty($_GET['site']) && !empty($_GET['cmd'])){
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $_GET['site']."?cmd=".$_GET['cmd']."&token=".$token."&noflag=true");
@@ -8,6 +8,6 @@
         echo $output;
         curl_close($ch);
     }else{
-        echo "Pour accéder à l'API les champs site et cmd doivent être indiqués. Valeurs possibles pour cmd : getQuote, getFlag";
+        echo "Pour accéder à l'API les champs site et cmd doivent être indiqués. Valeurs possibles pour cmd : getQuote, getFlag.";
     }
 ?>
