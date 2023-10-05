@@ -5,7 +5,7 @@ CREATE DATABASE medical_site;
 USE medical_site;
 
 -- Créer la table users
-CREATE TABLE users (
+CREATE TABLE user (
   id INT NOT NULL AUTO_INCREMENT,
   login VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL,
