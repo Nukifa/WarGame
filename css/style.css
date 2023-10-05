@@ -24,6 +24,19 @@ nav a:hover {
   background-color: #ccc;
 }
 
+/* - Citation - */
+div#citationDiv{
+  width: 90%;
+  margin-left: 5%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+p#paragrapheCitationDiv{
+  margin: 0px;
+}
+/* - fin citation - */
+
 main {
   margin-top: 20px;
 }
