@@ -8,14 +8,17 @@
 
   function get_user_by_username($username) {
     // Connexion à la base de données
-    $db = new PDO('mysql:host=localhost;dbname=medical_site;charset=utf8', 'postgres', 'postgres');
+    $db = new PDO('sql:host=localhost;dbname=medical_site;charset=utf8', 'postgres', 'postgres');
   
+    $login = $_POST['login'];
+    $password = $_POST['password'];
+
+    // Préparez la requête SQL
+    $requete = $db->query("SELECT * FROM utilisateurs WHERE login = $login AND password = $password");
     // Exécution de la requête SQL
-    $stmt = $db->prepare('SELECT * FROM user WHERE login = ?');
-    $stmt->execute([$username]);
   
     // Récupération des résultats de la requête
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    $user = $requete->fetch(PDO::FETCH_ASSOC);
   
     // Fermeture de la connexion à la base de données
     $db = null;
