@@ -8,7 +8,7 @@
 
   function get_user_by_username($username) {
     // Connexion à la base de données
-    $db = new PDO('mysql:host=localhost;dbname=my_database;charset=utf8', 'root', 'password');
+    $db = new PDO('mysql:host=localhost;dbname=medical_site;charset=utf8', 'postgres', 'postgres');
   
     // Exécution de la requête SQL
     $stmt = $db->prepare('SELECT * FROM user WHERE login = ?');

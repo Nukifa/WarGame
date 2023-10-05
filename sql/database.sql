@@ -4,11 +4,11 @@ CREATE DATABASE medical_site;
 -- Sélectionner la base de données
 USE medical_site;
 
--- Créer la table users
+-- Créer la table userssite
 CREATE TABLE user (
   id INT NOT NULL AUTO_INCREMENT,
   login VARCHAR(255) NOT NULL,
-  password VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,site
   mail VARCHAR(255) NOT NULL,
   admin BOOLEAN NOT NULL,
   PRIMARY KEY (id)
