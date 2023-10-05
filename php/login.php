@@ -11,7 +11,7 @@
     $db = new PDO('mysql:host=localhost;dbname=my_database;charset=utf8', 'root', 'password');
   
     // Exécution de la requête SQL
-    $stmt = $db->prepare('SELECT * FROM users WHERE username = ?');
+    $stmt = $db->prepare('SELECT * FROM user WHERE login = ?');
     $stmt->execute([$username]);
   
     // Récupération des résultats de la requête
