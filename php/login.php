@@ -1,27 +1,30 @@
 <?php
+ini_set('display_errors', 1); 
+ini_set('display_startup_errors', 1); 
+error_reporting(E_ALL); 
   session_start();
   if (isset($_SESSION['user'])) {
-    header('Location: index.php');
+    header('Location: ../index.php');
     exit;
   }
 
   function get_user_by_username($username) {
-    $db = new PDO('sql:host=localhost;dbname=medical_site;charset=utf8', 'postgres', 'postgres');
+    $db = new PDO('pgsql:host=localhost;dbname=medical_site;user=postgres;password=postgres');
   
-    $login = $_POST['login'];
+    $login = $_POST['username'];
     $password = $_POST['password'];
-    $requete = $db->query("SELECT * FROM utilisateurs WHERE login = $login AND password = $password");
-    $user = $requete->fetch(PDO::FETCH_ASSOC);
+    $requete = $db->query("SELECT login FROM users WHERE login = '$login' AND password = '$password'");
+    $user = $requete->fetch();
     $db = null;
     return $user;
   }
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['login'];
+    $username = $_POST['username'];
     $password = $_POST['password'];
     $user = get_user_by_username($username);
-    if ($user && password_verify($password, $user['password'])) {
-      $_SESSION['user'] = $user;
-      header('Location: index.html');
+    if ($user) {
+      $_SESSION['user'] = $username;
+      header('Location: ../index.php');
       exit;
     } else {
       $error = 'Les informations d\'identification ne sont pas correctes.';
