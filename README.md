@@ -9,10 +9,10 @@ environement Docker fonctionel
 Les étapes pour installer votre programme....
 
 Dites ce qu'il faut faire...
-docker build -t docker .
-docker run --rm -it --name SiteMedical -p 8080:80 -d docker
-docker exec -it SiteMedical /bin/bash
-/usr/local/bin/init.sh
+* docker build -t docker .
+* docker run --rm -it --name SiteMedical -p 8080:80 -d docker
+* docker exec -it SiteMedical /bin/bash
+* /usr/local/bin/init.sh
 
 _exemple_: Executez la commande ``telnet mapscii.me`` pour commencer ensuite [...]
 
