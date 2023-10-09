@@ -42,7 +42,7 @@ error_reporting(E_ALL);
   <?php include("../php/header.php"); ?>
   <h1>Page de connexion</h1>
 
-  <?php if ($error) : ?>
+  <?php if (isset($error)) : ?>
     <div class="error"><?php echo $error; ?></div>
   <?php endif; ?>
 
