@@ -1,3 +1,34 @@
 # WarGame
+Application web vulnerable permetant de réaliser des tests d'intrusions.
 
-Lien du Gdoc : https://docs.google.com/document/d/1MtbKQQ1SZ2UrppyI0wx4YIolh-WRGvQaT24aE-hw4Oo/edit?usp=sharing
+### Pré-requis
+environement Docker fonctionel
+
+### Installation
+
+Les étapes pour installer votre programme....
+
+Dites ce qu'il faut faire...
+
+_exemple_: Executez la commande ``telnet mapscii.me`` pour commencer ensuite [...]
+
+
+Ensuite vous pouvez montrer ce que vous obtenez au final...
+
+## Démarrage
+
+Dites comment faire pour lancer votre projet
+
+## Fabriqué avec
+
+_exemples :_
+* PHP interpreteur de code
+* Postgresql système de gestion de base de données relationnelle
+* Docker plateforme permettant de lancer certaines applications dans des conteneurs logiciels
+
+## Auteurs
+
+Listez le(s) auteur(s) du projet ici !
+* **Rayot Paul** 
+* **Brechet Axel**
+* **Marc-Olivier Rancoeur**
