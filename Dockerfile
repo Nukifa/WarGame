@@ -1,22 +1,24 @@
-FROM php:apache
+# Utiliser l'image Debian officielle comme base
+FROM debian:bullseye-slim
 
-RUN apt-get update -y && apt-get install -y \
-	postgresql-client \
-	&& apt-get clean \
-	&& rm -rf /var/lib/apt/lists/*
+# Mettre à jour le système et installer les paquets nécessaires
+RUN apt-get update && apt-get install -y \
+    apache2 \
+    php \
+    php-curl \
+    php-pgsql \
+    postgresql \
+    nano \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY . /var/www/html
+COPY . /var/www/html/
 
-RUN chmod -R 777 /var/www/html/uploads
+COPY init.sh /usr/local/bin/init.sh
 
-ENV PGHOST=localhost
-ENV PGPORT=5432
-ENV PGUSER=postgres
-ENV PGPASSWORD=postgres
-ENV PGDATABASE=medical_site
-
-COPY ./sql/database.sql /docker-entrypoint-initdb.d/
-
+# Exposer le port 80 pour Apache
 EXPOSE 80
 
-ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+RUN chmod +x /usr/local/bin/init.sh
+
+# Commande de démarrage pour exécuter Apache en mode démon
+#CMD ["/usr/local/bin/init.sh"]
