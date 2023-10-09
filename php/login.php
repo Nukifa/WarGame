@@ -13,7 +13,7 @@ error_reporting(E_ALL);
   
     $login = $_POST['username'];
     $password = $_POST['password'];
-    $requete = $db->query("SELECT login FROM users WHERE login = '$login' AND password = '$password'");
+    $requete = $db->query("SELECT * FROM users WHERE login = '$login' AND password = '$password'");
     $user = $requete->fetch();
     $db = null;
     return $user;
@@ -23,7 +23,7 @@ error_reporting(E_ALL);
     $password = $_POST['password'];
     $user = get_user_by_username($username);
     if ($user) {
-      $_SESSION['user'] = $username;
+      $_SESSION['user'] = $user;
       header('Location: ../index.php');
       exit;
     } else {
