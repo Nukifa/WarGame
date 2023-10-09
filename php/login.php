@@ -1,7 +1,7 @@
 <?php
   session_start();
   if (isset($_SESSION['user'])) {
-    header('Location: index.html');
+    header('Location: index.php');
     exit;
   }
 
@@ -33,8 +33,10 @@
 <html lang="fr">
 <head>
   <title>Page de connexion</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <?php include("../php/header.php"); ?>
   <h1>Page de connexion</h1>
 
   <?php if ($error) : ?>
