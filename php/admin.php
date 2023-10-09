@@ -9,7 +9,7 @@
   }
   function show_admin_page() {
     if (check_access($_SESSION['user'])) {
-      echo '<h1>MAP{nOT_a_fLAg}</h1>';
+      echo '<h1>MAP{Cool_admin_flag}</h1>';
     } else {
       header('Location: index.php');
     }
