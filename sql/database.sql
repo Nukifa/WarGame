@@ -2,25 +2,28 @@
 CREATE DATABASE medical_site;
 
 -- Sélectionner la base de données
-USE medical_site;
+\c medical_site;
 
 -- Créer la table userssite
 CREATE TABLE user (
-  id INT NOT NULL AUTO_INCREMENT,
   login VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL,site
   mail VARCHAR(255) NOT NULL,
   admin BOOLEAN NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (login)
 );
 
 -- Créer la table ordonnance
 CREATE TABLE ordonnance (
   id INT NOT NULL AUTO_INCREMENT,
+  user VARCHAR(255) NOT NULL,
   nom VARCHAR(255) NOT NULL,
+  medicament VARCHAR(255) NOT NULL,
+  frequence VARCHAR(255) NOT NULL,
   date DATE NOT NULL,
   nom_medecin VARCHAR(255) NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  CONSTRAINT user_ordonance_fk FOREIGN KEY(user) REFERENCES user(login)
 );
 
 -- Ajouter quelques données à la table users
@@ -32,5 +35,5 @@ VALUES
 -- Ajouter quelques données à la table ordonnance
 INSERT INTO ordonnance (nom, date, nom_medecin)
 VALUES
-('Ordonnance 1', '2023-07-20', 'Dr. Dupont'),
-('Ordonnance 2', '2023-08-03', 'Dr. Martin');
+('johndoe', 'Ordonnance 1', 'doliprane', '2x par jour midi et soir', '2023-07-20', 'Dr. Dupont'),
+('johndoe', 'Ordonnance 2', 'smecta', 'tous les soirs pendant 3 jours', '2023-08-03', 'Dr. Martin');
