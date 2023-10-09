@@ -19,7 +19,8 @@ Ensuite vous pouvez montrer ce que vous obtenez au final...
 
 ## Fonctoinnalité
 Lors de l'arrivée sur le site l'utilisateur n'accés qu'a deux page l'accueil et la page de connection.
-il peut alors ce connecter afin d'avoir accés a la page d'importation d'ordonance.
+Il peut alors ce connecter afin d'avoir accés a la page d'importation d'ordonance.
+Une fois connecter il peut egalement consulter c'est traitement sur la page d'accueil et pour finir il peut se deconnecter afin d'utilisé un autre compte. 
 
 
 ## Fabriqué avec
