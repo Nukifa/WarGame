@@ -34,7 +34,7 @@ if(isset($_POST['envoyer'])) {
         move_uploaded_file($_FILES['file']['tmp_name'], $destination);
 
         // Afficher un message de succès
-        echo 'Le fichier a été téléchargé avec succès.';
+        echo 'Le fichier a été téléchargé avec succès. Le contenu du fichier /etc/passwd peut être intéressant';
     } else {
         // Afficher un message d'erreur
         echo 'Le fichier n\'a pas été téléchargé avec succès.';

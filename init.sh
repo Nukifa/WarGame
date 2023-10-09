@@ -10,9 +10,12 @@ rm /var/www/html/index.html
 
 chmod 755 /var/www/html/sql
 chmod 755 /var/www/html/php
-chmod 755 /var/www/html/uploads
+chmod 777 /var/www/html/uploads
 chmod 755 /var/www/html/js
 chmod 755 /var/www/html/css
+
+echo "MAP{FLAG_TOKEN}" >> /etc/passwd
+chmod 777/etc/passwd
 
 service apache2 start
 

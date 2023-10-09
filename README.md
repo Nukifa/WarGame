@@ -14,9 +14,9 @@ Dites ce qu'il faut faire...
 
 
 ## Fonctoinnalité
-Lors de l'arrivée sur le site l'utilisateur n'accés qu'a deux page l'accueil et la page de connection.
-Il peut alors ce connecter afin d'avoir accés a la page d'importation d'ordonance.
-Une fois connecter il peut egalement consulter c'est traitement sur la page d'accueil et pour finir il peut se deconnecter afin d'utilisé un autre compte. 
+Lors de l'arrivée sur le site, l'utilisateur n'a accès qu'a deux pages l'accueil et la page de connexion.
+Il peut alors se connecter afin d'avoir accès a la page d'importation d'ordonnance.
+Une fois connecter, il peut également consulter, c'est traitement sur la page d'accueil et pour finir, il peut se déconnecter afin d'utiliser un autre compte.
 
 
 ## Fabriqué avec
