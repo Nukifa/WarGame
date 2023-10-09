@@ -20,7 +20,7 @@
     if (check_access($_SESSION['user'])) {
       echo '<h1>MAP{Cool_admin_flag}</h1>';
     } else {
-      header('Location: index.php');
+      header('Location: ../index.php');
     }
   }
   if (isset($_SESSION['user'])) {
