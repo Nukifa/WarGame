@@ -9,13 +9,9 @@ header {
   color: #fff;
   padding: 20px;
 }
-nav {
-  /*margin-right:0px;*/
-}
 nav ul li {
   display: inline-block;
 }
-
 nav ul li a {
   padding: 10px;
   text-decoration: none;

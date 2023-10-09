@@ -1,7 +1,5 @@
 <?php
 session_start();
-  if (isset($_SESSION['user'])) {
-  }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,6 +16,9 @@ session_start();
     </div>
     <section class="ordonnance">
       <h2>Ordonnance</h2>
+      <?php
+        
+      ?>
       <table>
         <tr>
           <th>Date</th>
