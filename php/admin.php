@@ -1,6 +1,15 @@
 
 <?php
   session_start();
+  ?>
+  <html>
+    <head>
+      <title>Page administrateur</title>
+      <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+  <?php
+  include("../php/header.php");
   function check_access($user) {
     if ($user['admin'] == 'true') {
       return true;
@@ -20,3 +29,5 @@
     header('Location: login.php');
   }
 ?>
+    </body>
+  </html>
