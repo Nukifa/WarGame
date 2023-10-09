@@ -6,22 +6,18 @@ environement Docker fonctionel
 
 ### Installation
 
-Les étapes pour installer votre programme....
-
 Dites ce qu'il faut faire...
 * docker build -t docker .
 * docker run --rm -it --name SiteMedical -p 8080:80 -d docker
 * docker exec -it SiteMedical /bin/bash
 * /usr/local/bin/init.sh
 
-_exemple_: Executez la commande ``telnet mapscii.me`` pour commencer ensuite [...]
 
+## Fonctoinnalité
+Lors de l'arrivée sur le site l'utilisateur n'accés qu'a deux page l'accueil et la page de connection.
+Il peut alors ce connecter afin d'avoir accés a la page d'importation d'ordonance.
+Une fois connecter il peut egalement consulter c'est traitement sur la page d'accueil et pour finir il peut se deconnecter afin d'utilisé un autre compte. 
 
-Ensuite vous pouvez montrer ce que vous obtenez au final...
-
-## Démarrage
-
-Dites comment faire pour lancer votre projet
 
 ## Fabriqué avec
 
