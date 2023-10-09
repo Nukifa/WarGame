@@ -1,5 +1,6 @@
 
 <?php
+  session_start();
   function check_access($user) {
     if ($user['admin'] == 'true') {
       return true;
