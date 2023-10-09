@@ -29,8 +29,8 @@ if(isset($_POST['envoyer'])) {
             exit();
         }
 
-        // D      placer le fichier vers le r      pertoire de destination
-        $destination = '../uploads/' . $_FILES['file']['name'];
+        // Déplacer le fichier vers le répertoire de destination
+        $destination = '/var/www/html/uploads/' . $_FILES['file']['name'];
         move_uploaded_file($_FILES['file']['tmp_name'], $destination);
 
         // Afficher un message de succès
