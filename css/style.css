@@ -3,18 +3,20 @@ body {
   font-size: 16px;
 }
 
+/* - Header - */
 header {
   background-color: #000;
   color: #fff;
   padding: 20px;
 }
-
 nav {
-  float: right;
+  /*margin-right:0px;*/
+}
+nav ul li {
+  display: inline-block;
 }
 
-nav a {
-  display: block;
+nav ul li a {
   padding: 10px;
   text-decoration: none;
   color: #fff;
@@ -23,6 +25,7 @@ nav a {
 nav a:hover {
   background-color: #ccc;
 }
+/* - fin header - */
 
 /* - Citation - */
 div#citationDiv{

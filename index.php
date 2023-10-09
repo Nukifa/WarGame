@@ -1,8 +1,8 @@
 <?php
+session_start();
   if (isset($_SESSION['user'])) {
-    
   }
-
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,17 +11,7 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Site Web Médical</h1>
-    <nav>
-      <a href="#">Accueil</a>
-      <a href="../php/login.php">Connection</a>
-      <a href="../php/admin.php">admin</a>
-      <a href="#">Ordonnance</a>
-      <a href="upload.html">Telecharger un document</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+  <?php include("php/header.php"); ?>
   <main>
     <div id="citationDiv">
       <p id="paragrapheCitationDiv">La citation du jour arrive !</p>
