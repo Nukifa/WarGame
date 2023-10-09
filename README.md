@@ -14,14 +14,13 @@ Dites ce qu'il faut faire...
 * docker exec -it SiteMedical /bin/bash
 * /usr/local/bin/init.sh
 
-_exemple_: Executez la commande ``telnet mapscii.me`` pour commencer ensuite [...]
-
 
 Ensuite vous pouvez montrer ce que vous obtenez au final...
 
-## Démarrage
+## Fonctoinnalité
+Lors de l'arrivée sur le site l'utilisateur n'accés qu'a deux page l'accueil et la page de connection.
+il peut alors ce connecter afin d'avoir accés a la page d'importation d'ordonance.
 
-Dites comment faire pour lancer votre projet
 
 ## Fabriqué avec
 
