@@ -6,7 +6,7 @@
             <?php if(isset($_SESSION['user'])){ ?>
                 <li><a href="../php/disconnect.php">Déconnexion</a></li>
                 <li><a href="../php/admin.php">Admin</a></li>
-                <li><a href="../upload.php">Télécharger un document</a></li>
+                <li><a href="../php/upload.php">Télécharger un document</a></li>
             <?php }else{ ?>
                 <li><a href="../php/login.php">Connexion</a></li>
             <?php } ?>
