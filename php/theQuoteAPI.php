@@ -22,6 +22,6 @@
             echo "Les commandes valides sont getQuote et getFlag.";
         }
     }else{
-        echo "Vous devez définir la commande à exécuter et le token d'authentification.";
+        echo "Vous devez définir la commande à exécuter et le token d'authentification. les commandes valides sont getQuote et getFlag.";
     }
 ?>
