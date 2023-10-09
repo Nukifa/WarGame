@@ -1,5 +1,8 @@
 <?php
 session_start();
+ini_set('display_errors', 1); 
+ini_set('display_startup_errors', 1); 
+error_reporting(E_ALL); 
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,38 +22,33 @@ session_start();
       <?php #Affichage utilisateur connecté
         if(isset($_SESSION['user'])){
           #Récupération des ordonances de l'utilisateur
-          $db = new PDO('sql:host=localhost;dbname=medical_site;charset=utf8', 'postgres', 'postgres');
-          $request = $db->prepare("SELECT * FROM ordonance WHERE user = ?");
-          $request->execute(array($_SESSION['user']));
-          echo "<table>
-          <tr>
-            <th>Date</th>
-            <th>Médecin</th>
-            <th>Médicament</th>
-            <th>Posologie</th>
-            <th>Durée</th>
-          </tr>";
-          while($result = $request->fetch()){
-            echo "<tr>";
-            echo "<td>" . $result['nom'] . "</td>";
-            echo "<td>" . $result['date'] . "</td>";
-            echo "<td>" . $result['nom_medecin'] . "</td>";
-            echo "<tr>";
+          $db = new PDO('pgsql:host=localhost;dbname=medical_site;user=postgres;password=postgres');
+          $request = $db->prepare("SELECT * FROM ordonnance WHERE login = ?");
+          $request->execute(array($_SESSION['user']['login']));
+          echo "Vous avez ". $request->rowCount() . " ordonances.";
+          if($request->rowCount() > 0){
+            echo "<table>
+            <tr>
+              <th>Ordonance</th>
+              <th>Médicament</th>
+              <th>Fréquence</th>
+              <th>date</th>
+              <th>Médecin</th>
+            </tr>";
+            while($result = $request->fetch()){
+              echo "<tr>";
+              echo "<td>" . $result['nom'] . "</td>";
+              echo "<td>" . $result['medicament'] . "</td>";
+              echo "<td>" . $result['frequence'] . "</td>";
+              echo "<td>" . $result['date'] . "</td>";
+              echo "<td>" . $result['nom_medecin'] . "</td>";
+              echo "<tr>";
+            }
+            echo "</table>";
           }
-          echo "</table>";
         }else{?>
           <p>Vous devez vous connecter pour avoir accès à vos ordonances. connectez-vous en cliquant <a href="php/login.php" class="special-link">ici</a></p>
         <?php }?>
-      
-        
-        <!--<tr>
-          <td>2023-08-03</td>
-          <td>Dr. Martin</td>
-          <td>Antibiotiques</td>
-          <td>1 gélule par jour</td>
-          <td>7 jours</td>
-        </tr>-->
-      
     </section>
   </main>
   <footer>
