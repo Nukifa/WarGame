@@ -6,7 +6,6 @@ sed -i 's/;extension=pdo_pgsql/extension=pdo_pgsql/' /etc/php/7.4/apache2/php.in
 sed -i 's/local   all             all                                     peer/local   all             all                                     md5/' /etc/postgresql/13/main/pg_hba.conf
 sed -i 's/local   all             postgres                                peer/local   all             postgres                                trust/' /etc/postgresql/13/main/pg_hba.conf
 
-
 rm /var/www/html/index.html
 
 service apache2 start
