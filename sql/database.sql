@@ -27,8 +27,8 @@ CREATE TABLE ordonnance (
 -- Ajouter quelques données à la table users
 INSERT INTO users (login, password, mail, admin)
 VALUES
-('johndoe', '123456', 'johndoe@example.com', FALSE),
-('janedoe', '654321', 'janedoe@example.com', TRUE);
+('johndoe', '123456', 'johndoe@example.com', TRUE),
+('janedoe', '654321', 'janedoe@example.com', FALSE);
 
 -- Ajouter quelques données à la table ordonnance
 INSERT INTO ordonnance (login, nom, medicament, frequence, date, nom_medecin)
