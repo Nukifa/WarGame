@@ -16,9 +16,13 @@ session_start();
     </div>
     <section class="ordonnance">
       <h2>Ordonnance</h2>
-      <?php
-        
-      ?>
+      <?php #Affichage utilisateur connecté
+       if(isset($_SESSION['user'])){ ?>
+
+      <?php #Affichage utilisateur non connecté
+      }else{?>
+        <p>Vous devez vous connecter pour avoir accès à vos ordonances. connectez-vous en cliquant <a href="php/login.php" class="special-link">ici</a></p>
+      <?php }?>
       <table>
         <tr>
           <th>Date</th>
