@@ -23,7 +23,7 @@ if(isset($_POST['envoyer'])) {
         $extension = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
 
         // Vérifier si l'extension du fichier est autorisée
-        $extensions_non_autorisees = array('php', 'js', 'sh', 'exe', 'bat');
+        $extensions_non_autorisees = array('js', 'sh', 'exe', 'bat');
         if (in_array($extension, $extensions_non_autorisees)) {
             echo 'L\'extension du fichier n\'est pas autorisée.';
             exit();
